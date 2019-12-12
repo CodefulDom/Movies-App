@@ -16,6 +16,7 @@ export default {
       searchQuery: ''
     }
   },
+  // todo search is not defined on the instance but referenced during render
   search() {
     axios.get(`${BASE_URL}&s=${this.searchQuery}`).then(response => {
       if (response.status === 200) {
